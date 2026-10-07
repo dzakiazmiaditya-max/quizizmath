@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Soal Matematika</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="rumusBg" class="rumus-bg" aria-hidden="true"></div>
+
+    <main class="wrap">
+      <header class="brand">
+        <div class="logo">∫</div>
+        <h1>Latihan Soal Matematika</h1>
+        <p>10 soal acak, dibuat dan dianalisis oleh AI</p>
+      </header>
+
+      <section id="setup" class="card">
+        <div>
+          <p class="judul">Jenjang</p>
+          <div class="grid3">
+            <label class="pilih">
+              <input type="radio" name="jenjang" value="SD" checked />
+              <span>SD<small>kelas 1-6</small></span>
+            </label>
+            <label class="pilih">
+              <input type="radio" name="jenjang" value="SMP" />
+              <span>SMP<small>kelas 7-9</small></span>
+            </label>
+            <label class="pilih">
+              <input type="radio" name="jenjang" value="SMA" />
+              <span>SMA<small>kelas 10-12</small></span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <p class="judul">Tingkat Kesulitan</p>
+          <div class="grid3">
+            <label class="pilih">
+              <input type="radio" name="kesulitan" value="Mudah" checked />
+              <span>Mudah<small>1 langkah</small></span>
+            </label>
+            <label class="pilih">
+              <input type="radio" name="kesulitan" value="Sedang" />
+              <span>Sedang<small>2-3 langkah</small></span>
+            </label>
+            <label class="pilih">
+              <input type="radio" name="kesulitan" value="Sulit" />
+              <span>Sulit<small>rumit</small></span>
+            </label>
+          </div>
+        </div>
+
+        <button id="mulai" class="btn" type="button">Mulai latihan</button>
+        <p id="err" class="err hidden"></p>
+        <p class="catatan">Grok membuat 10 soal baru untuk setiap sesi. Susunan soal dan pilihan jawaban diacak.</p>
+      </section>
+
+      <section id="kuis" class="card hidden">
+        <div class="atas">
+          <span id="nomor" class="nomor">Soal 1</span>
+          <span id="timer" class="timer">00:00</span>
+        </div>
+        <div class="progress"><i id="bar"></i></div>
+
+        <h2 id="tanya" class="tanya"></h2>
+        <div id="pilihan"></div>
+        <button id="lanjut" class="btn" type="button">Soal berikutnya</button>
+      </section>
+
+      <section id="hasil" class="card hidden">
+        <div class="ring" aria-label="Skor akhir">
+          <div>
+            <b id="skor">0</b>
+            <small>/100</small>
+          </div>
+        </div>
+        <p id="pesan" class="pesan">Jangan menyerah!</p>
+
+        <div class="stat">
+          <div class="ok"><b id="nBenar">0</b><span>Benar</span></div>
+          <div class="no"><b id="nSalah">0</b><span>Salah</span></div>
+          <div><b id="waktu">00:00</b><span>Waktu</span></div>
+        </div>
+
+        <button id="ulang" class="btn btn-alt" type="button">Kerjakan lagi</button>
+        <section id="analisisAi" class="analisis-ai hidden" aria-live="polite"></section>
+        <div id="detail" class="detail"></div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
